@@ -37,17 +37,6 @@ def start(message):
 	global user_ID
 	user_ID = message.from_user.id
 	bot.send_message(user_ID, 'Type /help for the list of commands')
-	if message.from_user.id == 422267183:
-		print("Admin logged")
-		global key
-		key = 'HEb8tuBdfUsVLnHzJWpaE7CHHFzYsPDqw5zY2LMOn9AVVxzZO4hw5fOvZM4NO9DH'
-		global secret
-		secret = 'Tbakae4kzMj6V6NUpbx3YtDCsOQVPnoWLm56VT9uDf0p0lN3lvIzKtQRC4LhS5U9'
-		global client
-		client = Client(key, secret)
-		notifications.start_notifications(bot_transfered=bot, client_transfered=client, key_transfered=key,
-											   secret_transfered=secret, used_ID_transfered=user_ID)
-
 
 @bot.message_handler(func=lambda x: inputkey)
 def input_key(message):
